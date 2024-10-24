@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Venda de doces, biscoitos e finis em apoio à Criança mais feliz.">
+    <title>Potes dos Piás - Venda de Doces</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('333.jpg'); /* Imagem de fundo */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Faz a imagem rolar com o site */
+            color: #fff;
+            text-align: center;
+            line-height: 1.6;
+            height: 100%;
+        }
+
+        /* Animação de abertura */
+        #content {
+            opacity: 0;
+            transform: scale(0.8);
+            animation: openSite 1s forwards;
+            animation-delay: 1.5s; /* Espera a animação de overlay terminar */
+        }
+
+        @keyframes openSite {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Animação de overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 9999;
+            animation: overlayDisappear 1.5s forwards;
+        }
+
+        @keyframes overlayDisappear {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                display: none;
+            }
+        }
+
+        header {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro para destacar o texto */
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        header a {
+            background-color: #ff9800;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.5s ease;
+        }
+
+        header a:hover {
+            background-color: #e68900;
+        }
+
+        section {
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente para destacar as informações */
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: hsl(60, 100%, 50%);
+        }
+
+        section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .address, .date, .pix {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .pix {
+            color: #FF0000;
+        }
+
+        .horario-venda {
+            color: #0000FF; /* Cor azul */
+        }
+
+        footer {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+        }
+
+        footer a {
+            color: #ffeb3b;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Estilo das novas seções */
+        .about-project {
+            background-color: #ccffcc; /* Fundo verde claro */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            color: #000;
+        }
+
+        .gallery {
+            background-color: #cceeff; /* Fundo azul claro */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            color: #000;
+        }
+
+        .gallery img {
+            width: 150px;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Overlay para animação de abertura -->
+    <div class="overlay"></div>
+
+    <!-- Conteúdo principal com animação de abertura -->
+    <div id="content">
+        <header>
+            <h1>Potes dos Piás</h1>
+            <p>Participe da nossa venda de doces, biscoitos e finis para apoiar a instituição <strong>Criança Mais Feliz</strong>.</p>
+            <a href="#venda">Saiba Mais aqui.</a>
+        </header>
+
+        <section id="venda">
+            <h2>Detalhes da Venda</h2>
+            <p class="address">Endereço: R. Rubéns Galvão de França, 923<br>Parque Boturussu, São Paulo - SP, 03804-010</p>
+            <p class="date">Data da Venda: 26/10/2024</p>
+            <p class="pix">PIX para doações: 47917933822</p>
+            <p class="horario-venda">Horário da venda: 8h até 12h</p> 
+            <p class="price">Preço dos nossos produtos:
+                <br>Pequeno: R$9,99
+                <br>Médio: R$14,99
+                <br>Grande: R$19,99
+            </p>
+            <a href="https://criancamaisfelizrs.org.br/" target="_blank" class="button">Saiba mais sobre a instituição</a>
+        </section>
+
+        <!-- Ideia 1: Sobre o Projeto -->
+        <section class="about-project">
+            <h2>Sobre o Projeto</h2>
+            <p>Nosso propósito é arrecadar dinheiro para as crianças do Rio Grande do Sul que, no começo do ano, sofreram com um forte ataque de enchentes. Por favor, nos ajude comprando nossos potes decorados. Cada compra faz a diferença!</p>
+        </section>
+
+        <!-- Ideia 2: Galeria de Imagens -->
+        <section class="gallery">
+            <h2>Galeria de Produtos</h2>
+            <img src="/mnt/data/Imagem do WhatsApp de 2024-10-21 à(s) 20.47.53_5b09028b.jpg" alt="Potes decorados 1">
+            <img src="/mnt/data/Imagem do WhatsApp de 2024-10-17 à(s) 15.32.45_706617dd.jpg" alt="Potes decorados 2">
+        </section>
+
+        <footer>
+            <p>Todos os direitos reservados © Potes dos Piás 2024</p>
+            <p><a href="https://criancamaisfelizrs.org.br/" target="_blank">Criança Mais Feliz</a></p>
+        </footer>
+    </div>
+
+    <!-- Script para remoção da overlay após a animação -->
+    <script>
+        window.onload = function () {
+            const overlay = document.querySelector('.overlay');
+            setTimeout(() => {
+                overlay.style.display = 'none'; // Remove a overlay após a animação
+            }, 1500); // Duração da animação de overlay
+        };
+    </script>
+</body>
+</html>
